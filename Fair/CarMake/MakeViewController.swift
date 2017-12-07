@@ -8,11 +8,17 @@
 
 import UIKit
 
-final class MakeViewController: UIViewController {
+final class MakeViewController: UIViewController, Reloadable {
+    var carDataSource: CarDataSource?
+
     static func instantiateFromStoryboard() -> MakeViewController? {
         let storyboard = UIStoryboard(name: "Make", bundle: nil)
         let identifier = String(describing: MakeViewController.self)
         guard let controller = storyboard.instantiateViewController(withIdentifier: identifier) as? MakeViewController else { return nil }
         return controller
+    }
+
+    func reloadData() {
+
     }
 }
