@@ -62,6 +62,6 @@ xcuserdata/
 /Carthage
 
 # Keep your keys in secret
-Keys.swift
-KeysDev.swift
-KeysBeta.swift
+Fair/Configuration/Keys.swift
+Fair/Configuration/KeysDev.swift
+Fair/Configuration/KeysBeta.swift
