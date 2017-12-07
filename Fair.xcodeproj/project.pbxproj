@@ -43,6 +43,13 @@
 		D81D916F1FD9063E009F7C62 /* Year.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81D916E1FD9063E009F7C62 /* Year.swift */; };
 		D81D91701FD9063E009F7C62 /* Year.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81D916E1FD9063E009F7C62 /* Year.swift */; };
 		D81D91711FD9063E009F7C62 /* Year.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81D916E1FD9063E009F7C62 /* Year.swift */; };
+		D81D91771FD90D56009F7C62 /* MakeCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81D91761FD90D56009F7C62 /* MakeCellTests.swift */; };
+		D81D917C1FD9105A009F7C62 /* MakeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81D917B1FD9105A009F7C62 /* MakeCell.swift */; };
+		D81D917D1FD9105A009F7C62 /* MakeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81D917B1FD9105A009F7C62 /* MakeCell.swift */; };
+		D81D917E1FD9105A009F7C62 /* MakeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81D917B1FD9105A009F7C62 /* MakeCell.swift */; };
+		D81D91801FD91387009F7C62 /* MakeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81D917F1FD91387009F7C62 /* MakeCell.xib */; };
+		D81D91811FD91387009F7C62 /* MakeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81D917F1FD91387009F7C62 /* MakeCell.xib */; };
+		D81D91821FD91387009F7C62 /* MakeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81D917F1FD91387009F7C62 /* MakeCell.xib */; };
 		D8C2E87B1FD7D69E009CD3AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C2E87A1FD7D69E009CD3AD /* AppDelegate.swift */; };
 		D8C2E8801FD7D69E009CD3AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E87E1FD7D69E009CD3AD /* Main.storyboard */; };
 		D8C2E8821FD7D69E009CD3AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E8811FD7D69E009CD3AD /* Assets.xcassets */; };
@@ -76,6 +83,9 @@
 		D81D91661FD90568009F7C62 /* Make.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Make.swift; sourceTree = "<group>"; };
 		D81D916A1FD905E6009F7C62 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D81D916E1FD9063E009F7C62 /* Year.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Year.swift; sourceTree = "<group>"; };
+		D81D91761FD90D56009F7C62 /* MakeCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeCellTests.swift; sourceTree = "<group>"; };
+		D81D917B1FD9105A009F7C62 /* MakeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeCell.swift; sourceTree = "<group>"; };
+		D81D917F1FD91387009F7C62 /* MakeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeCell.xib; sourceTree = "<group>"; };
 		D8C2E8771FD7D69E009CD3AD /* Fair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C2E87A1FD7D69E009CD3AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8C2E87F1FD7D69E009CD3AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -159,10 +169,36 @@
 		D81D915A1FD8FDCB009F7C62 /* FairDevTests */ = {
 			isa = PBXGroup;
 			children = (
+				D81D91731FD90CB4009F7C62 /* CarMake */,
 				D81D915B1FD8FDCB009F7C62 /* ResourcesTests.swift */,
 				D81D915D1FD8FDCC009F7C62 /* Info.plist */,
 			);
 			path = FairDevTests;
+			sourceTree = "<group>";
+		};
+		D81D91731FD90CB4009F7C62 /* CarMake */ = {
+			isa = PBXGroup;
+			children = (
+				D81D91761FD90D56009F7C62 /* MakeCellTests.swift */,
+			);
+			path = CarMake;
+			sourceTree = "<group>";
+		};
+		D81D91781FD9102C009F7C62 /* CarMake */ = {
+			isa = PBXGroup;
+			children = (
+				D81D91791FD91039009F7C62 /* Cell */,
+			);
+			path = CarMake;
+			sourceTree = "<group>";
+		};
+		D81D91791FD91039009F7C62 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D81D917B1FD9105A009F7C62 /* MakeCell.swift */,
+				D81D917F1FD91387009F7C62 /* MakeCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		D8C2E86E1FD7D69E009CD3AD = {
@@ -188,6 +224,7 @@
 		D8C2E8791FD7D69E009CD3AD /* Fair */ = {
 			isa = PBXGroup;
 			children = (
+				D81D91781FD9102C009F7C62 /* CarMake */,
 				D81D91431FD8ED1F009F7C62 /* Resources */,
 				D81D91391FD8EA0C009F7C62 /* Model */,
 				D81D91341FD8E609009F7C62 /* AppCoordinator */,
@@ -331,6 +368,7 @@
 				D81D91191FD8E12E009F7C62 /* LaunchScreen.storyboard in Resources */,
 				D81D91461FD8ED5A009F7C62 /* Localizable.strings in Resources */,
 				D81D911A1FD8E12E009F7C62 /* Assets.xcassets in Resources */,
+				D81D91811FD91387009F7C62 /* MakeCell.xib in Resources */,
 				D81D911B1FD8E12E009F7C62 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +380,7 @@
 				D81D912B1FD8E21B009F7C62 /* LaunchScreen.storyboard in Resources */,
 				D81D91471FD8ED5A009F7C62 /* Localizable.strings in Resources */,
 				D81D912C1FD8E21B009F7C62 /* Assets.xcassets in Resources */,
+				D81D91821FD91387009F7C62 /* MakeCell.xib in Resources */,
 				D81D912D1FD8E21B009F7C62 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +399,7 @@
 				D8C2E8851FD7D69E009CD3AD /* LaunchScreen.storyboard in Resources */,
 				D81D91451FD8ED5A009F7C62 /* Localizable.strings in Resources */,
 				D8C2E8821FD7D69E009CD3AD /* Assets.xcassets in Resources */,
+				D81D91801FD91387009F7C62 /* MakeCell.xib in Resources */,
 				D8C2E8801FD7D69E009CD3AD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D81D91411FD8EC64009F7C62 /* Iteratable.swift in Sources */,
+				D81D917D1FD9105A009F7C62 /* MakeCell.swift in Sources */,
 				D81D91371FD8E628009F7C62 /* AppCoordinator.swift in Sources */,
 				D81D91681FD90568009F7C62 /* Make.swift in Sources */,
 				D81D91161FD8E12E009F7C62 /* AppDelegate.swift in Sources */,
@@ -430,6 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D81D91421FD8EC64009F7C62 /* Iteratable.swift in Sources */,
+				D81D917E1FD9105A009F7C62 /* MakeCell.swift in Sources */,
 				D81D91381FD8E628009F7C62 /* AppCoordinator.swift in Sources */,
 				D81D91691FD90568009F7C62 /* Make.swift in Sources */,
 				D81D91281FD8E21B009F7C62 /* AppDelegate.swift in Sources */,
@@ -446,6 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D81D915C1FD8FDCB009F7C62 /* ResourcesTests.swift in Sources */,
+				D81D91771FD90D56009F7C62 /* MakeCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D81D91401FD8EC64009F7C62 /* Iteratable.swift in Sources */,
+				D81D917C1FD9105A009F7C62 /* MakeCell.swift in Sources */,
 				D81D91361FD8E628009F7C62 /* AppCoordinator.swift in Sources */,
 				D81D91671FD90568009F7C62 /* Make.swift in Sources */,
 				D8C2E87B1FD7D69E009CD3AD /* AppDelegate.swift in Sources */,
