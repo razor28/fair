@@ -38,6 +38,7 @@ final class MakeViewController: UIViewController, Reloadable {
     private func setupTableView() {
         let cellNib = UINib(nibName: cellIdentifier, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: cellIdentifier)
+        tableView.tableFooterView = UIView()
     }
 }
 
@@ -51,5 +52,11 @@ extension MakeViewController: UITableViewDataSource {
         let make = items[indexPath.row]
         cell.makeLabel.text = make.niceName
         return cell
+    }
+}
+
+extension MakeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 64.0
     }
 }

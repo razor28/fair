@@ -31,6 +31,7 @@ final class AppCoordinator: NSObject {
             childCoordinators.append(makeCoordinator)
         }
         tabBarController.viewControllers = tabViewControllers
+        childCoordinators.first?.start()
     }
 
     private func setup(_ viewController: UIViewController, with state: State) {
