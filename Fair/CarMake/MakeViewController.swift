@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class MakeViewController: UIViewController, Reloadable {
     @IBOutlet var searchBar: UISearchBar!
@@ -51,6 +52,10 @@ extension MakeViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? MakeCell else { return UITableViewCell() }
         let make = items[indexPath.row]
         cell.makeLabel.text = make.niceName
+        cell.makeImageView.kf.cancelDownloadTask()
+        if let possibleImageURL = URL(string: "https://logo.clearbit.com/" + make.niceName + ".com") {
+            cell.makeImageView.kf.setImage(with: possibleImageURL)
+        }
         return cell
     }
 }

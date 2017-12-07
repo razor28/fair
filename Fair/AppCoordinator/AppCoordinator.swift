@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class AppCoordinator: NSObject {
     private let tabBarController: UITabBarController
@@ -17,8 +18,10 @@ final class AppCoordinator: NSObject {
     }
 
     func start() {
-        tabBarController.delegate = self
+        // 50 MB
+        ImageCache.default.maxDiskCacheSize = 50 * 1024 * 1024
 
+        tabBarController.delegate = self
         var tabViewControllers = [UINavigationController]()
         for rawValue in State.rawValues() {
             guard
