@@ -10,7 +10,25 @@ import XCTest
 @testable import FairDev
 
 class MakeViewControllerTests: XCTestCase {
-    func testCanBeInitializedFromStoryboard() {
-        XCTAssertNotNil(MakeViewController.instantiateFromStoryboard())
+    var makeViewController: MakeViewController!
+
+    override func setUp() {
+        super.setUp()
+        guard let viewController = MakeViewController.instantiateFromStoryboard() else {
+            XCTFail("Can't instanciate makeViewController from storyboard")
+            return
+        }
+        _ = viewController.view
+        makeViewController = viewController
+    }
+
+    func testCanBeInitializedFromStoryboard() { }
+
+    func testHasTableView() {
+        XCTAssertNotNil(makeViewController.tableView)
+    }
+
+    func testHasSearchBar() {
+        XCTAssertNotNil(makeViewController.searchBar)
     }
 }
