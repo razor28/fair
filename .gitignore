@@ -60,3 +60,8 @@ xcuserdata/
 
 # Carthage dependency manager
 /Carthage
+
+# Keep your keys in secret
+Keys.swift
+KeysDev.swift
+KeysBeta.swift
