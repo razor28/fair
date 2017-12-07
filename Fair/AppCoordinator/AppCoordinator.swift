@@ -18,21 +18,20 @@ final class AppCoordinator {
     func start() {
         var tabViewControllers = [UINavigationController]()
         for rawValue in State.rawValues() {
-            guard let state = State(rawValue: rawValue) else { continue }
-            let vc = viewController(with: state)
-            let navigationController = UINavigationController(rootViewController: vc)
-            tabViewControllers.append(navigationController)
+            guard
+                let state = State(rawValue: rawValue),
+                let makeViewController = MakeViewController.instantiateFromStoryboard()
+            else { continue }
+            setupTabItems(for: makeViewController, with: state)
+            tabViewControllers.append(UINavigationController(rootViewController: makeViewController))
         }
         tabBarController.viewControllers = tabViewControllers
     }
 
-    private func viewController(with state: State) -> UIViewController {
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = UIColor.white
+    private func setupTabItems(for viewController: UIViewController, with state: State) {
         let title = state.tabBarItemTitle
         let image = state.tabBarItemImage
         let seledtedImage = state.tabBarItemSelectedImage
         viewController.tabBarItem = UITabBarItem(title: title, image: image, selectedImage: seledtedImage)
-        return viewController
     }
 }

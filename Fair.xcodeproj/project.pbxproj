@@ -50,6 +50,13 @@
 		D81D91801FD91387009F7C62 /* MakeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81D917F1FD91387009F7C62 /* MakeCell.xib */; };
 		D81D91811FD91387009F7C62 /* MakeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81D917F1FD91387009F7C62 /* MakeCell.xib */; };
 		D81D91821FD91387009F7C62 /* MakeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81D917F1FD91387009F7C62 /* MakeCell.xib */; };
+		D81D91881FD917F3009F7C62 /* Make.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81D91871FD917F3009F7C62 /* Make.storyboard */; };
+		D81D91891FD917F3009F7C62 /* Make.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81D91871FD917F3009F7C62 /* Make.storyboard */; };
+		D81D918A1FD917F3009F7C62 /* Make.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81D91871FD917F3009F7C62 /* Make.storyboard */; };
+		D81D918E1FD9189D009F7C62 /* MakeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81D918D1FD9189D009F7C62 /* MakeViewControllerTests.swift */; };
+		D81D91901FD91959009F7C62 /* MakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81D918F1FD91959009F7C62 /* MakeViewController.swift */; };
+		D81D91911FD91959009F7C62 /* MakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81D918F1FD91959009F7C62 /* MakeViewController.swift */; };
+		D81D91921FD91959009F7C62 /* MakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81D918F1FD91959009F7C62 /* MakeViewController.swift */; };
 		D8C2E87B1FD7D69E009CD3AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C2E87A1FD7D69E009CD3AD /* AppDelegate.swift */; };
 		D8C2E8801FD7D69E009CD3AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E87E1FD7D69E009CD3AD /* Main.storyboard */; };
 		D8C2E8821FD7D69E009CD3AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E8811FD7D69E009CD3AD /* Assets.xcassets */; };
@@ -86,6 +93,9 @@
 		D81D91761FD90D56009F7C62 /* MakeCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeCellTests.swift; sourceTree = "<group>"; };
 		D81D917B1FD9105A009F7C62 /* MakeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeCell.swift; sourceTree = "<group>"; };
 		D81D917F1FD91387009F7C62 /* MakeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeCell.xib; sourceTree = "<group>"; };
+		D81D91871FD917F3009F7C62 /* Make.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Make.storyboard; sourceTree = "<group>"; };
+		D81D918D1FD9189D009F7C62 /* MakeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeViewControllerTests.swift; sourceTree = "<group>"; };
+		D81D918F1FD91959009F7C62 /* MakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeViewController.swift; sourceTree = "<group>"; };
 		D8C2E8771FD7D69E009CD3AD /* Fair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C2E87A1FD7D69E009CD3AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8C2E87F1FD7D69E009CD3AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -180,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				D81D91761FD90D56009F7C62 /* MakeCellTests.swift */,
+				D81D918D1FD9189D009F7C62 /* MakeViewControllerTests.swift */,
 			);
 			path = CarMake;
 			sourceTree = "<group>";
@@ -188,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				D81D91791FD91039009F7C62 /* Cell */,
+				D81D91871FD917F3009F7C62 /* Make.storyboard */,
+				D81D918F1FD91959009F7C62 /* MakeViewController.swift */,
 			);
 			path = CarMake;
 			sourceTree = "<group>";
@@ -368,6 +381,7 @@
 				D81D91191FD8E12E009F7C62 /* LaunchScreen.storyboard in Resources */,
 				D81D91461FD8ED5A009F7C62 /* Localizable.strings in Resources */,
 				D81D911A1FD8E12E009F7C62 /* Assets.xcassets in Resources */,
+				D81D91891FD917F3009F7C62 /* Make.storyboard in Resources */,
 				D81D91811FD91387009F7C62 /* MakeCell.xib in Resources */,
 				D81D911B1FD8E12E009F7C62 /* Main.storyboard in Resources */,
 			);
@@ -380,6 +394,7 @@
 				D81D912B1FD8E21B009F7C62 /* LaunchScreen.storyboard in Resources */,
 				D81D91471FD8ED5A009F7C62 /* Localizable.strings in Resources */,
 				D81D912C1FD8E21B009F7C62 /* Assets.xcassets in Resources */,
+				D81D918A1FD917F3009F7C62 /* Make.storyboard in Resources */,
 				D81D91821FD91387009F7C62 /* MakeCell.xib in Resources */,
 				D81D912D1FD8E21B009F7C62 /* Main.storyboard in Resources */,
 			);
@@ -399,6 +414,7 @@
 				D8C2E8851FD7D69E009CD3AD /* LaunchScreen.storyboard in Resources */,
 				D81D91451FD8ED5A009F7C62 /* Localizable.strings in Resources */,
 				D8C2E8821FD7D69E009CD3AD /* Assets.xcassets in Resources */,
+				D81D91881FD917F3009F7C62 /* Make.storyboard in Resources */,
 				D81D91801FD91387009F7C62 /* MakeCell.xib in Resources */,
 				D8C2E8801FD7D69E009CD3AD /* Main.storyboard in Resources */,
 			);
@@ -460,6 +476,7 @@
 				D81D91161FD8E12E009F7C62 /* AppDelegate.swift in Sources */,
 				D81D91701FD9063E009F7C62 /* Year.swift in Sources */,
 				D81D913D1FD8EAA3009F7C62 /* State.swift in Sources */,
+				D81D91911FD91959009F7C62 /* MakeViewController.swift in Sources */,
 				D81D914B1FD8EE76009F7C62 /* String+Localization.swift in Sources */,
 				D81D91531FD8F657009F7C62 /* AppImage.swift in Sources */,
 				D81D916C1FD905E6009F7C62 /* Model.swift in Sources */,
@@ -477,6 +494,7 @@
 				D81D91281FD8E21B009F7C62 /* AppDelegate.swift in Sources */,
 				D81D91711FD9063E009F7C62 /* Year.swift in Sources */,
 				D81D913E1FD8EAA3009F7C62 /* State.swift in Sources */,
+				D81D91921FD91959009F7C62 /* MakeViewController.swift in Sources */,
 				D81D914C1FD8EE76009F7C62 /* String+Localization.swift in Sources */,
 				D81D91541FD8F657009F7C62 /* AppImage.swift in Sources */,
 				D81D916D1FD905E6009F7C62 /* Model.swift in Sources */,
@@ -488,6 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D81D915C1FD8FDCB009F7C62 /* ResourcesTests.swift in Sources */,
+				D81D918E1FD9189D009F7C62 /* MakeViewControllerTests.swift in Sources */,
 				D81D91771FD90D56009F7C62 /* MakeCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,6 +522,7 @@
 				D8C2E87B1FD7D69E009CD3AD /* AppDelegate.swift in Sources */,
 				D81D916F1FD9063E009F7C62 /* Year.swift in Sources */,
 				D81D913C1FD8EAA3009F7C62 /* State.swift in Sources */,
+				D81D91901FD91959009F7C62 /* MakeViewController.swift in Sources */,
 				D81D914A1FD8EE76009F7C62 /* String+Localization.swift in Sources */,
 				D81D91521FD8F657009F7C62 /* AppImage.swift in Sources */,
 				D81D916B1FD905E6009F7C62 /* Model.swift in Sources */,
