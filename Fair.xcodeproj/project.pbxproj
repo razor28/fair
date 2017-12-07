@@ -69,6 +69,15 @@
 		D85055701FD9364700AD2060 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D850556F1FD9364700AD2060 /* Keys.swift */; };
 		D85055721FD936AC00AD2060 /* KeysDev.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85055711FD936AC00AD2060 /* KeysDev.swift */; };
 		D85055741FD936C700AD2060 /* KeysBeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85055731FD936C700AD2060 /* KeysBeta.swift */; };
+		D85055771FD93CC300AD2060 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85055761FD93CC300AD2060 /* APIService.swift */; };
+		D85055781FD93CC300AD2060 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85055761FD93CC300AD2060 /* APIService.swift */; };
+		D85055791FD93CC300AD2060 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85055761FD93CC300AD2060 /* APIService.swift */; };
+		D850557B1FD943FF00AD2060 /* MakesAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D850557A1FD943FF00AD2060 /* MakesAPIResponse.swift */; };
+		D850557C1FD943FF00AD2060 /* MakesAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D850557A1FD943FF00AD2060 /* MakesAPIResponse.swift */; };
+		D850557D1FD943FF00AD2060 /* MakesAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D850557A1FD943FF00AD2060 /* MakesAPIResponse.swift */; };
+		D850557F1FD944F900AD2060 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D850557E1FD944F900AD2060 /* APIManager.swift */; };
+		D85055801FD944F900AD2060 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D850557E1FD944F900AD2060 /* APIManager.swift */; };
+		D85055811FD944F900AD2060 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D850557E1FD944F900AD2060 /* APIManager.swift */; };
 		D8C2E87B1FD7D69E009CD3AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C2E87A1FD7D69E009CD3AD /* AppDelegate.swift */; };
 		D8C2E8801FD7D69E009CD3AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E87E1FD7D69E009CD3AD /* Main.storyboard */; };
 		D8C2E8821FD7D69E009CD3AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E8811FD7D69E009CD3AD /* Assets.xcassets */; };
@@ -119,6 +128,9 @@
 		D850556F1FD9364700AD2060 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		D85055711FD936AC00AD2060 /* KeysDev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysDev.swift; sourceTree = "<group>"; };
 		D85055731FD936C700AD2060 /* KeysBeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysBeta.swift; sourceTree = "<group>"; };
+		D85055761FD93CC300AD2060 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		D850557A1FD943FF00AD2060 /* MakesAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakesAPIResponse.swift; sourceTree = "<group>"; };
+		D850557E1FD944F900AD2060 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		D8C2E8771FD7D69E009CD3AD /* Fair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C2E87A1FD7D69E009CD3AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8C2E87F1FD7D69E009CD3AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -257,6 +269,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D85055751FD93C8E00AD2060 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D85055761FD93CC300AD2060 /* APIService.swift */,
+				D850557A1FD943FF00AD2060 /* MakesAPIResponse.swift */,
+				D850557E1FD944F900AD2060 /* APIManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		D8C2E86E1FD7D69E009CD3AD = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +303,7 @@
 		D8C2E8791FD7D69E009CD3AD /* Fair */ = {
 			isa = PBXGroup;
 			children = (
+				D85055751FD93C8E00AD2060 /* Networking */,
 				D81D91781FD9102C009F7C62 /* CarMake */,
 				D81D91431FD8ED1F009F7C62 /* Resources */,
 				D81D91391FD8EA0C009F7C62 /* Model */,
@@ -530,16 +553,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D850557C1FD943FF00AD2060 /* MakesAPIResponse.swift in Sources */,
 				D81D91411FD8EC64009F7C62 /* Iteratable.swift in Sources */,
 				D81D917D1FD9105A009F7C62 /* MakeCell.swift in Sources */,
 				D81D91371FD8E628009F7C62 /* AppCoordinator.swift in Sources */,
 				D85055721FD936AC00AD2060 /* KeysDev.swift in Sources */,
 				D81D91681FD90568009F7C62 /* Make.swift in Sources */,
 				D81D91161FD8E12E009F7C62 /* AppDelegate.swift in Sources */,
+				D85055781FD93CC300AD2060 /* APIService.swift in Sources */,
 				D81D91701FD9063E009F7C62 /* Year.swift in Sources */,
 				D81D913D1FD8EAA3009F7C62 /* State.swift in Sources */,
 				D81D919D1FD91E63009F7C62 /* Reloadable.swift in Sources */,
 				D81D91991FD91E16009F7C62 /* CarDataSource.swift in Sources */,
+				D85055801FD944F900AD2060 /* APIManager.swift in Sources */,
 				D81D91911FD91959009F7C62 /* MakeViewController.swift in Sources */,
 				D81D914B1FD8EE76009F7C62 /* String+Localization.swift in Sources */,
 				D81D91531FD8F657009F7C62 /* AppImage.swift in Sources */,
@@ -552,16 +578,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D850557D1FD943FF00AD2060 /* MakesAPIResponse.swift in Sources */,
 				D81D91421FD8EC64009F7C62 /* Iteratable.swift in Sources */,
 				D81D917E1FD9105A009F7C62 /* MakeCell.swift in Sources */,
 				D81D91381FD8E628009F7C62 /* AppCoordinator.swift in Sources */,
 				D81D91691FD90568009F7C62 /* Make.swift in Sources */,
 				D81D91281FD8E21B009F7C62 /* AppDelegate.swift in Sources */,
 				D81D91711FD9063E009F7C62 /* Year.swift in Sources */,
+				D85055791FD93CC300AD2060 /* APIService.swift in Sources */,
 				D81D913E1FD8EAA3009F7C62 /* State.swift in Sources */,
 				D81D919E1FD91E63009F7C62 /* Reloadable.swift in Sources */,
 				D81D919A1FD91E16009F7C62 /* CarDataSource.swift in Sources */,
 				D81D91921FD91959009F7C62 /* MakeViewController.swift in Sources */,
+				D85055811FD944F900AD2060 /* APIManager.swift in Sources */,
 				D81D914C1FD8EE76009F7C62 /* String+Localization.swift in Sources */,
 				D81D91541FD8F657009F7C62 /* AppImage.swift in Sources */,
 				D85055741FD936C700AD2060 /* KeysBeta.swift in Sources */,
@@ -584,16 +613,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D850557B1FD943FF00AD2060 /* MakesAPIResponse.swift in Sources */,
 				D81D91401FD8EC64009F7C62 /* Iteratable.swift in Sources */,
 				D81D917C1FD9105A009F7C62 /* MakeCell.swift in Sources */,
 				D81D91361FD8E628009F7C62 /* AppCoordinator.swift in Sources */,
 				D81D91671FD90568009F7C62 /* Make.swift in Sources */,
 				D85055701FD9364700AD2060 /* Keys.swift in Sources */,
 				D8C2E87B1FD7D69E009CD3AD /* AppDelegate.swift in Sources */,
+				D85055771FD93CC300AD2060 /* APIService.swift in Sources */,
 				D81D916F1FD9063E009F7C62 /* Year.swift in Sources */,
 				D81D913C1FD8EAA3009F7C62 /* State.swift in Sources */,
 				D81D919C1FD91E63009F7C62 /* Reloadable.swift in Sources */,
 				D81D91981FD91E16009F7C62 /* CarDataSource.swift in Sources */,
+				D850557F1FD944F900AD2060 /* APIManager.swift in Sources */,
 				D81D91901FD91959009F7C62 /* MakeViewController.swift in Sources */,
 				D81D914A1FD8EE76009F7C62 /* String+Localization.swift in Sources */,
 				D81D91521FD8F657009F7C62 /* AppImage.swift in Sources */,

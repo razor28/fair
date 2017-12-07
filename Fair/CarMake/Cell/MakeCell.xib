@@ -21,8 +21,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QgW-yd-gaK" userLabel="ContainerView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIF-v2-Z4U">
-                                <rect key="frame" x="20" y="0.0" width="355" height="64"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Make" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIF-v2-Z4U">
+                                <rect key="frame" x="20" y="0.0" width="263" height="64"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,11 +37,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="eIF-v2-Z4U" secondAttribute="trailing" id="9H2-d5-sZW"/>
                             <constraint firstAttribute="bottom" secondItem="eIF-v2-Z4U" secondAttribute="bottom" id="9oy-VT-Pyn"/>
                             <constraint firstAttribute="trailing" secondItem="hOE-lT-cgn" secondAttribute="trailing" constant="20" symbolic="YES" id="DHK-HB-41Y"/>
                             <constraint firstAttribute="height" constant="64" id="aa8-dc-mdk"/>
                             <constraint firstItem="hOE-lT-cgn" firstAttribute="top" secondItem="QgW-yd-gaK" secondAttribute="top" id="dpE-0K-GbJ"/>
+                            <constraint firstItem="hOE-lT-cgn" firstAttribute="leading" secondItem="eIF-v2-Z4U" secondAttribute="trailing" constant="8" symbolic="YES" id="rVc-KO-qGR"/>
                             <constraint firstItem="eIF-v2-Z4U" firstAttribute="leading" secondItem="QgW-yd-gaK" secondAttribute="leading" constant="20" symbolic="YES" id="uWN-37-t90"/>
                             <constraint firstAttribute="bottom" secondItem="hOE-lT-cgn" secondAttribute="bottom" id="wGr-mm-MVr"/>
                             <constraint firstItem="eIF-v2-Z4U" firstAttribute="top" secondItem="QgW-yd-gaK" secondAttribute="top" id="zjm-cV-8oF"/>

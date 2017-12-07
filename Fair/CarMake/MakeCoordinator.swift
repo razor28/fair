@@ -21,6 +21,15 @@ final class MakeCoordinator {
 
     func start() {
         reloadableObject.carDataSource = self
+        let success: ([Make]) -> Void  = { [weak self] makes in
+            guard let strongSelf = self else { return }
+            strongSelf.items = makes
+            strongSelf.reloadableObject.reloadData()
+        }
+        let failure: (String) -> Void = { message in
+            debugPrint("Error message: \(message)")
+        }
+        APIManager.sharedInstance.makes(with: state, success: success, failure: failure)
     }
 }
 

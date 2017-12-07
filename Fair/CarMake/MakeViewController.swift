@@ -25,7 +25,9 @@ final class MakeViewController: UIViewController, Reloadable {
     }
 
     func reloadData() {
-
+        guard let items = carDataSource?.makes() else { return }
+        self.items = items
+        tableView.reloadData()
     }
 
     override func viewDidLoad() {
@@ -46,8 +48,8 @@ extension MakeViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? MakeCell else { return UITableViewCell() }
-//        let make = items[indexPath.row]
-//        cell.makeLabel.text = make.niceName
+        let make = items[indexPath.row]
+        cell.makeLabel.text = make.niceName
         return cell
     }
 }

@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct Model {
+struct Model: Decodable {
     let id: String
     let name: String
     let niceName: String
-    let years: Year
+    let years: [Year]
 }
