@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D81D91161FD8E12E009F7C62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C2E87A1FD7D69E009CD3AD /* AppDelegate.swift */; };
+		D81D91191FD8E12E009F7C62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E8831FD7D69E009CD3AD /* LaunchScreen.storyboard */; };
+		D81D911A1FD8E12E009F7C62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E8811FD7D69E009CD3AD /* Assets.xcassets */; };
+		D81D911B1FD8E12E009F7C62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E87E1FD7D69E009CD3AD /* Main.storyboard */; };
+		D81D91281FD8E21B009F7C62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C2E87A1FD7D69E009CD3AD /* AppDelegate.swift */; };
+		D81D912B1FD8E21B009F7C62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E8831FD7D69E009CD3AD /* LaunchScreen.storyboard */; };
+		D81D912C1FD8E21B009F7C62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E8811FD7D69E009CD3AD /* Assets.xcassets */; };
+		D81D912D1FD8E21B009F7C62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E87E1FD7D69E009CD3AD /* Main.storyboard */; };
 		D8C2E87B1FD7D69E009CD3AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C2E87A1FD7D69E009CD3AD /* AppDelegate.swift */; };
 		D8C2E8801FD7D69E009CD3AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E87E1FD7D69E009CD3AD /* Main.storyboard */; };
 		D8C2E8821FD7D69E009CD3AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E8811FD7D69E009CD3AD /* Assets.xcassets */; };
@@ -14,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D81D91201FD8E12E009F7C62 /* FairDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FairDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D81D91211FD8E12F009F7C62 /* InfoDev.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = InfoDev.plist; path = /Users/dastan/Developer/Fair/Fair/Fair/Configuration/InfoDev.plist; sourceTree = "<absolute>"; };
+		D81D91321FD8E21B009F7C62 /* FairBeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FairBeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D81D91331FD8E21B009F7C62 /* InfoBeta.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = InfoBeta.plist; path = /Users/dastan/Developer/Fair/Fair/Fair/Configuration/InfoBeta.plist; sourceTree = "<absolute>"; };
 		D8C2E8771FD7D69E009CD3AD /* Fair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C2E87A1FD7D69E009CD3AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8C2E87F1FD7D69E009CD3AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -23,6 +35,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D81D91171FD8E12E009F7C62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D81D91291FD8E21B009F7C62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D8C2E8741FD7D69E009CD3AD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,6 +59,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D81D91231FD8E164009F7C62 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				D8C2E8861FD7D69E009CD3AD /* Info.plist */,
+				D81D91211FD8E12F009F7C62 /* InfoDev.plist */,
+				D81D91331FD8E21B009F7C62 /* InfoBeta.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		D8C2E86E1FD7D69E009CD3AD = {
 			isa = PBXGroup;
 			children = (
@@ -45,6 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				D8C2E8771FD7D69E009CD3AD /* Fair.app */,
+				D81D91201FD8E12E009F7C62 /* FairDev.app */,
+				D81D91321FD8E21B009F7C62 /* FairBeta.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,11 +90,11 @@
 		D8C2E8791FD7D69E009CD3AD /* Fair */ = {
 			isa = PBXGroup;
 			children = (
+				D81D91231FD8E164009F7C62 /* Configuration */,
 				D8C2E87A1FD7D69E009CD3AD /* AppDelegate.swift */,
 				D8C2E87E1FD7D69E009CD3AD /* Main.storyboard */,
 				D8C2E8811FD7D69E009CD3AD /* Assets.xcassets */,
 				D8C2E8831FD7D69E009CD3AD /* LaunchScreen.storyboard */,
-				D8C2E8861FD7D69E009CD3AD /* Info.plist */,
 			);
 			path = Fair;
 			sourceTree = "<group>";
@@ -64,6 +102,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D81D91141FD8E12E009F7C62 /* FairDev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D81D911D1FD8E12E009F7C62 /* Build configuration list for PBXNativeTarget "FairDev" */;
+			buildPhases = (
+				D81D91151FD8E12E009F7C62 /* Sources */,
+				D81D91171FD8E12E009F7C62 /* Frameworks */,
+				D81D91181FD8E12E009F7C62 /* Resources */,
+				D81D911C1FD8E12E009F7C62 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FairDev;
+			productName = Fair;
+			productReference = D81D91201FD8E12E009F7C62 /* FairDev.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D81D91261FD8E21B009F7C62 /* FairBeta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D81D912F1FD8E21B009F7C62 /* Build configuration list for PBXNativeTarget "FairBeta" */;
+			buildPhases = (
+				D81D91271FD8E21B009F7C62 /* Sources */,
+				D81D91291FD8E21B009F7C62 /* Frameworks */,
+				D81D912A1FD8E21B009F7C62 /* Resources */,
+				D81D912E1FD8E21B009F7C62 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FairBeta;
+			productName = Fair;
+			productReference = D81D91321FD8E21B009F7C62 /* FairBeta.app */;
+			productType = "com.apple.product-type.application";
+		};
 		D8C2E8761FD7D69E009CD3AD /* Fair */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8C2E8891FD7D69E009CD3AD /* Build configuration list for PBXNativeTarget "Fair" */;
@@ -92,6 +166,12 @@
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = Dastan;
 				TargetAttributes = {
+					D81D91141FD8E12E009F7C62 = {
+						ProvisioningStyle = Automatic;
+					};
+					D81D91261FD8E21B009F7C62 = {
+						ProvisioningStyle = Automatic;
+					};
 					D8C2E8761FD7D69E009CD3AD = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
@@ -112,11 +192,33 @@
 			projectRoot = "";
 			targets = (
 				D8C2E8761FD7D69E009CD3AD /* Fair */,
+				D81D91141FD8E12E009F7C62 /* FairDev */,
+				D81D91261FD8E21B009F7C62 /* FairBeta */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D81D91181FD8E12E009F7C62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D81D91191FD8E12E009F7C62 /* LaunchScreen.storyboard in Resources */,
+				D81D911A1FD8E12E009F7C62 /* Assets.xcassets in Resources */,
+				D81D911B1FD8E12E009F7C62 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D81D912A1FD8E21B009F7C62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D81D912B1FD8E21B009F7C62 /* LaunchScreen.storyboard in Resources */,
+				D81D912C1FD8E21B009F7C62 /* Assets.xcassets in Resources */,
+				D81D912D1FD8E21B009F7C62 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D8C2E8751FD7D69E009CD3AD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -130,6 +232,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		D81D911C1FD8E12E009F7C62 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		D81D912E1FD8E21B009F7C62 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
 		D8C2E88C1FD7DAFD009CD3AD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -146,6 +274,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D81D91151FD8E12E009F7C62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D81D91161FD8E12E009F7C62 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D81D91271FD8E21B009F7C62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D81D91281FD8E21B009F7C62 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D8C2E8731FD7D69E009CD3AD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -176,6 +320,70 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D81D911E1FD8E12E009F7C62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9RA83UYYNT;
+				INFOPLIST_FILE = "$(SRCROOT)/Fair/Configuration/InfoDev.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dastan.fairdev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D81D911F1FD8E12E009F7C62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9RA83UYYNT;
+				INFOPLIST_FILE = "$(SRCROOT)/Fair/Configuration/InfoDev.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dastan.fairdev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		D81D91301FD8E21B009F7C62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9RA83UYYNT;
+				INFOPLIST_FILE = "$(SRCROOT)/Fair/Configuration/InfoBeta.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dastan.fairbeta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D81D91311FD8E21B009F7C62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9RA83UYYNT;
+				INFOPLIST_FILE = "$(SRCROOT)/Fair/Configuration/InfoBeta.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dastan.fairbeta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		D8C2E8871FD7D69E009CD3AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -289,7 +497,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9RA83UYYNT;
-				INFOPLIST_FILE = Fair/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Fair/Configuration/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dastan.fair;
@@ -305,7 +513,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9RA83UYYNT;
-				INFOPLIST_FILE = Fair/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Fair/Configuration/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dastan.fair;
@@ -318,6 +526,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D81D911D1FD8E12E009F7C62 /* Build configuration list for PBXNativeTarget "FairDev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D81D911E1FD8E12E009F7C62 /* Debug */,
+				D81D911F1FD8E12E009F7C62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D81D912F1FD8E21B009F7C62 /* Build configuration list for PBXNativeTarget "FairBeta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D81D91301FD8E21B009F7C62 /* Debug */,
+				D81D91311FD8E21B009F7C62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D8C2E8721FD7D69E009CD3AD /* Build configuration list for PBXProject "Fair" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
