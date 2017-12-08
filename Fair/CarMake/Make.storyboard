@@ -54,7 +54,7 @@
         <!--Item View Controller-->
         <scene sceneID="e6C-F1-zOk">
             <objects>
-                <viewController storyboardIdentifier="ItemViewController" id="NsB-gX-4t3" customClass="ItemViewController" customModule="Fair" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ItemViewController" hidesBottomBarWhenPushed="YES" id="NsB-gX-4t3" customClass="ItemViewController" customModule="Fair" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0TD-bu-z6S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
