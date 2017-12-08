@@ -38,4 +38,13 @@ extension DetailCoordinator: DetailViewControllerDelegate {
     func userDidReturn(from: DetailViewController) {
         delegate?.jobIsFinished(for: self)
     }
+
+    func imageLinks(for: DetailViewController) -> [URL] {
+        let baseString = "https://a.tcimg.net/v/model_images/v1/" +
+                         "\(year.year)" + "/" + make.niceName + "/" + model.niceName
+        return [URL(string: baseString + "/all/190x97/side"),
+                URL(string: baseString + "/all/190x97/f3q"),
+                URL(string: baseString + "/all/360x185/side"),
+                URL(string: baseString + "/all/360x185/f3q")].flatMap { $0 }
+    }
 }
