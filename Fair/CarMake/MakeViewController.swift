@@ -13,7 +13,8 @@ final class MakeViewController: UIViewController, Reloadable {
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tableView: UITableView!
 
-    var carDataSource: CarDataSource?
+    weak var carDataSource: CarDataSource?
+    weak var selectableDelegate: Selectable?
 
     private let cellIdentifier = String(describing: MakeCell.self)
     private var items = [Make]()
@@ -63,5 +64,11 @@ extension MakeViewController: UITableViewDataSource {
 extension MakeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 64.0
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let make = items[indexPath.row]
+        selectableDelegate?.viewController(self, didSelectMake: make)
     }
 }

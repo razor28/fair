@@ -10,5 +10,6 @@ import Foundation
 
 protocol Reloadable: class {
     func reloadData()
-    var carDataSource: CarDataSource? { get set }
+    weak var carDataSource: CarDataSource? { get set }
+    weak var selectableDelegate: Selectable? { get set }
 }
