@@ -82,6 +82,15 @@
 		D86639BB1FDA9E0B00DEDF2B /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86639BA1FDA9E0B00DEDF2B /* NetworkingTests.swift */; };
 		D895EB4B1FDAA11500A8BF94 /* AllMakes.json in Resources */ = {isa = PBXBuildFile; fileRef = D895EB4A1FDAA11500A8BF94 /* AllMakes.json */; };
 		D895EB4E1FDAABA700A8BF94 /* Incorrect.json in Resources */ = {isa = PBXBuildFile; fileRef = D895EB4D1FDAABA700A8BF94 /* Incorrect.json */; };
+		D895EB511FDAAFC400A8BF94 /* ModelCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB501FDAAFC400A8BF94 /* ModelCoordinator.swift */; };
+		D895EB521FDAAFC400A8BF94 /* ModelCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB501FDAAFC400A8BF94 /* ModelCoordinator.swift */; };
+		D895EB531FDAAFC400A8BF94 /* ModelCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB501FDAAFC400A8BF94 /* ModelCoordinator.swift */; };
+		D895EB551FDAB15000A8BF94 /* Selectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB541FDAB15000A8BF94 /* Selectable.swift */; };
+		D895EB561FDAB15000A8BF94 /* Selectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB541FDAB15000A8BF94 /* Selectable.swift */; };
+		D895EB571FDAB15000A8BF94 /* Selectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB541FDAB15000A8BF94 /* Selectable.swift */; };
+		D895EB591FDAB53400A8BF94 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB581FDAB53400A8BF94 /* ItemViewController.swift */; };
+		D895EB5A1FDAB53400A8BF94 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB581FDAB53400A8BF94 /* ItemViewController.swift */; };
+		D895EB5B1FDAB53400A8BF94 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB581FDAB53400A8BF94 /* ItemViewController.swift */; };
 		D8C2E87B1FD7D69E009CD3AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C2E87A1FD7D69E009CD3AD /* AppDelegate.swift */; };
 		D8C2E8801FD7D69E009CD3AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E87E1FD7D69E009CD3AD /* Main.storyboard */; };
 		D8C2E8821FD7D69E009CD3AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E8811FD7D69E009CD3AD /* Assets.xcassets */; };
@@ -139,6 +148,9 @@
 		D86639BA1FDA9E0B00DEDF2B /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		D895EB4A1FDAA11500A8BF94 /* AllMakes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllMakes.json; sourceTree = "<group>"; };
 		D895EB4D1FDAABA700A8BF94 /* Incorrect.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Incorrect.json; sourceTree = "<group>"; };
+		D895EB501FDAAFC400A8BF94 /* ModelCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCoordinator.swift; sourceTree = "<group>"; };
+		D895EB541FDAB15000A8BF94 /* Selectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selectable.swift; sourceTree = "<group>"; };
+		D895EB581FDAB53400A8BF94 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		D8C2E8771FD7D69E009CD3AD /* Fair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C2E87A1FD7D69E009CD3AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8C2E87F1FD7D69E009CD3AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -256,6 +268,7 @@
 				D81D918F1FD91959009F7C62 /* MakeViewController.swift */,
 				D81D91971FD91E15009F7C62 /* CarDataSource.swift */,
 				D81D919B1FD91E63009F7C62 /* Reloadable.swift */,
+				D895EB541FDAB15000A8BF94 /* Selectable.swift */,
 				D8C5CE401FD91F93006C0C0C /* MakeCoordinator.swift */,
 			);
 			path = CarMake;
@@ -300,6 +313,15 @@
 			path = SampleData;
 			sourceTree = "<group>";
 		};
+		D895EB4F1FDAAF9000A8BF94 /* CarModel */ = {
+			isa = PBXGroup;
+			children = (
+				D895EB501FDAAFC400A8BF94 /* ModelCoordinator.swift */,
+				D895EB581FDAB53400A8BF94 /* ItemViewController.swift */,
+			);
+			path = CarModel;
+			sourceTree = "<group>";
+		};
 		D8C2E86E1FD7D69E009CD3AD = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +346,7 @@
 		D8C2E8791FD7D69E009CD3AD /* Fair */ = {
 			isa = PBXGroup;
 			children = (
+				D895EB4F1FDAAF9000A8BF94 /* CarModel */,
 				D85055751FD93C8E00AD2060 /* Networking */,
 				D81D91781FD9102C009F7C62 /* CarMake */,
 				D81D91431FD8ED1F009F7C62 /* Resources */,
@@ -581,6 +604,7 @@
 				D81D91411FD8EC64009F7C62 /* Iteratable.swift in Sources */,
 				D81D917D1FD9105A009F7C62 /* MakeCell.swift in Sources */,
 				D81D91371FD8E628009F7C62 /* AppCoordinator.swift in Sources */,
+				D895EB521FDAAFC400A8BF94 /* ModelCoordinator.swift in Sources */,
 				D85055721FD936AC00AD2060 /* KeysDev.swift in Sources */,
 				D81D91681FD90568009F7C62 /* Make.swift in Sources */,
 				D81D91161FD8E12E009F7C62 /* AppDelegate.swift in Sources */,
@@ -590,7 +614,9 @@
 				D81D919D1FD91E63009F7C62 /* Reloadable.swift in Sources */,
 				D81D91991FD91E16009F7C62 /* CarDataSource.swift in Sources */,
 				D85055801FD944F900AD2060 /* APIManager.swift in Sources */,
+				D895EB5A1FDAB53400A8BF94 /* ItemViewController.swift in Sources */,
 				D81D91911FD91959009F7C62 /* MakeViewController.swift in Sources */,
+				D895EB561FDAB15000A8BF94 /* Selectable.swift in Sources */,
 				D81D914B1FD8EE76009F7C62 /* String+Localization.swift in Sources */,
 				D81D91531FD8F657009F7C62 /* AppImage.swift in Sources */,
 				D8C5CE421FD91F93006C0C0C /* MakeCoordinator.swift in Sources */,
@@ -606,6 +632,7 @@
 				D81D91421FD8EC64009F7C62 /* Iteratable.swift in Sources */,
 				D81D917E1FD9105A009F7C62 /* MakeCell.swift in Sources */,
 				D81D91381FD8E628009F7C62 /* AppCoordinator.swift in Sources */,
+				D895EB531FDAAFC400A8BF94 /* ModelCoordinator.swift in Sources */,
 				D81D91691FD90568009F7C62 /* Make.swift in Sources */,
 				D81D91281FD8E21B009F7C62 /* AppDelegate.swift in Sources */,
 				D81D91711FD9063E009F7C62 /* Year.swift in Sources */,
@@ -615,7 +642,9 @@
 				D81D919A1FD91E16009F7C62 /* CarDataSource.swift in Sources */,
 				D81D91921FD91959009F7C62 /* MakeViewController.swift in Sources */,
 				D85055811FD944F900AD2060 /* APIManager.swift in Sources */,
+				D895EB5B1FDAB53400A8BF94 /* ItemViewController.swift in Sources */,
 				D81D914C1FD8EE76009F7C62 /* String+Localization.swift in Sources */,
+				D895EB571FDAB15000A8BF94 /* Selectable.swift in Sources */,
 				D81D91541FD8F657009F7C62 /* AppImage.swift in Sources */,
 				D85055741FD936C700AD2060 /* KeysBeta.swift in Sources */,
 				D8C5CE431FD91F93006C0C0C /* MakeCoordinator.swift in Sources */,
@@ -642,6 +671,7 @@
 				D81D91401FD8EC64009F7C62 /* Iteratable.swift in Sources */,
 				D81D917C1FD9105A009F7C62 /* MakeCell.swift in Sources */,
 				D81D91361FD8E628009F7C62 /* AppCoordinator.swift in Sources */,
+				D895EB511FDAAFC400A8BF94 /* ModelCoordinator.swift in Sources */,
 				D81D91671FD90568009F7C62 /* Make.swift in Sources */,
 				D85055701FD9364700AD2060 /* Keys.swift in Sources */,
 				D8C2E87B1FD7D69E009CD3AD /* AppDelegate.swift in Sources */,
@@ -651,7 +681,9 @@
 				D81D919C1FD91E63009F7C62 /* Reloadable.swift in Sources */,
 				D81D91981FD91E16009F7C62 /* CarDataSource.swift in Sources */,
 				D850557F1FD944F900AD2060 /* APIManager.swift in Sources */,
+				D895EB591FDAB53400A8BF94 /* ItemViewController.swift in Sources */,
 				D81D91901FD91959009F7C62 /* MakeViewController.swift in Sources */,
+				D895EB551FDAB15000A8BF94 /* Selectable.swift in Sources */,
 				D81D914A1FD8EE76009F7C62 /* String+Localization.swift in Sources */,
 				D81D91521FD8F657009F7C62 /* AppImage.swift in Sources */,
 				D8C5CE411FD91F93006C0C0C /* MakeCoordinator.swift in Sources */,
