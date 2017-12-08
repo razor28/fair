@@ -73,4 +73,25 @@ final class APIManager {
             }
         }
     }
+
+    func dealers(with make: String, zipcode: String, success:(@escaping ([Dealer]) -> Void), failure: (@escaping(String) -> Void)) {
+        let provider = MoyaProvider<APIService>()
+        provider.request(.dealers(make: make, zipcode: zipcode)) { result in
+            switch result {
+            case let .success(moyaResponse):
+                let data = moyaResponse.data
+                do {
+                    let response = try JSONDecoder().decode(DealersAPIResponse.self, from: data)
+                    success(response.dealers)
+                    return
+                } catch {
+                    failure(error.localizedDescription)
+                    return
+                }
+            case let .failure(error):
+                failure(error.localizedDescription)
+                return
+            }
+        }
+    }
 }

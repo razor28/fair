@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import CoreLocation
 
 protocol DetailCoordinatorDelegate: class {
     func jobIsFinished(for: DetailCoordinator)
 }
 
-final class DetailCoordinator {
+final class DetailCoordinator: NSObject {
     let rootViewController: UIViewController
     let make: Make
     let model: Model
@@ -22,6 +23,9 @@ final class DetailCoordinator {
 
     private var overViewText: String?
     private var articles: [Article]?
+    private var dealers: [Dealer]?
+    private let locationManager = CLLocationManager()
+    private var detailViewController: DetailViewController?
 
     init(rootViewController: UIViewController, make: Make, model: Model, year: Year) {
         self.rootViewController = rootViewController
@@ -36,6 +40,8 @@ final class DetailCoordinator {
         rootViewController.show(detailVC, sender: nil)
         requestOverviewAndUpdate(detailVC)
         requestArticlesAndUpdate(detailVC)
+        showLocalDealers()
+        self.detailViewController = detailVC
     }
 
     private func requestOverviewAndUpdate(_ detailVC: DetailViewController) {
@@ -63,7 +69,7 @@ final class DetailCoordinator {
             guard
                 let strongSelf = self,
                 let strongVC = detailVC
-                else { return }
+            else { return }
             strongSelf.articles = articles
             strongVC.reloadArticles()
         }
@@ -71,6 +77,40 @@ final class DetailCoordinator {
            debugPrint(message)
         }
         APIManager.sharedInstance.articles(with: make.name, model: model.name, year: "\(year.year)", success: success, failure: failure)
+    }
+
+    private func showLocalDealers() {
+        locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
+    }
+
+    private func updateLocalDealers(for location: CLLocation) {
+        CLGeocoder().reverseGeocodeLocation(location, completionHandler: { [weak self] (placemarks, error) -> Void in
+            guard error == nil else { return }
+            guard let placemarks = placemarks else { return }
+            for placemark in placemarks {
+                guard let postalCode = placemark.postalCode else { continue }
+                guard let strongSelf = self else { return }
+                strongSelf.requestLocalDealers(by: postalCode)
+            }
+        })
+    }
+
+    private func requestLocalDealers(by zipcode: String) {
+        let success: ([Dealer]) -> Void  = { [weak self] dealers in
+            guard let strongSelf = self else { return }
+            strongSelf.dealers = dealers
+            guard let dealVC = strongSelf.detailViewController else { return }
+            dealVC.reloadDealers()
+        }
+        let failure: (String) -> Void = { message in
+            debugPrint(message)
+        }
+        APIManager.sharedInstance.dealers(with: make.name, zipcode: zipcode, success: success, failure: failure)
     }
 }
 
@@ -96,5 +136,23 @@ extension DetailCoordinator: DetailViewControllerDelegate {
     func articles(for: DetailViewController) -> [Article] {
         guard let articles = articles else { return [] }
         return articles
+    }
+
+    func dealers(for: DetailViewController) -> [Dealer] {
+        guard let dealers = dealers else { return [] }
+        return dealers
+    }
+}
+
+extension DetailCoordinator: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.first else { return }
+        manager.stopUpdatingLocation()
+        updateLocalDealers(for: location)
+    }
+
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        guard status == CLAuthorizationStatus.denied else { return }
+        // Handle denied state
     }
 }

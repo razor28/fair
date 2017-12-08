@@ -128,8 +128,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qya-q6-cO9">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qya-q6-cO9">
                                 <rect key="frame" x="0.0" y="438" width="375" height="229"/>
+                                <connections>
+                                    <outlet property="delegate" destination="UQa-MU-DFF" id="EsV-0C-TfN"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -149,6 +152,7 @@
                         <viewLayoutGuide key="safeArea" id="4oy-dQ-QU8"/>
                     </view>
                     <connections>
+                        <outlet property="mapView" destination="qya-q6-cO9" id="JmR-Z5-zTF"/>
                         <outlet property="tableView" destination="9Ma-NN-Zo9" id="guS-6a-8Tb"/>
                     </connections>
                 </viewController>

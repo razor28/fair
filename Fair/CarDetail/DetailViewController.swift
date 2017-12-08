@@ -7,17 +7,20 @@
 //
 
 import UIKit
+import MapKit
 
 protocol DetailViewControllerDelegate: class {
     func userDidReturn(from: DetailViewController)
     func imageLinks(for: DetailViewController) -> [URL]
     func overViewText(for: DetailViewController) -> String
     func articles(for: DetailViewController) -> [Article]
+    func dealers(for: DetailViewController) -> [Dealer]
 }
 
 final class DetailViewController: UIViewController {
     weak var delegate: DetailViewControllerDelegate?
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var mapView: MKMapView!
 
     private var articles = [Article]()
 
@@ -50,6 +53,18 @@ final class DetailViewController: UIViewController {
         articles = updatedArticles
         let indexSet: IndexSet = [2]
         tableView.reloadSections(indexSet, with: .automatic)
+    }
+
+    func reloadDealers() {
+        mapView.removeAnnotations(mapView.annotations)
+        guard let dealers = delegate?.dealers(for: self) else { return }
+        for dealer in dealers {
+            let location = CLLocationCoordinate2D(latitude: dealer.address.latitude, longitude: dealer.address.longitude)
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = location
+            mapView.addAnnotation(annotation)
+        }
+        mapView.showAnnotations(mapView.annotations, animated: true)
     }
 }
 
@@ -120,5 +135,19 @@ extension DetailViewController: UITableViewDelegate {
         guard indexPath.section == 2 else { return }
         let link = articles[indexPath.row].link
         UIApplication.shared.open(link, options: [:], completionHandler: nil)
+    }
+}
+
+extension DetailViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "annotationView")
+        annotationView.canShowCallout = false
+        return annotationView
+    }
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let annotation = view.annotation else { return }
+        let placemark = MKPlacemark(coordinate: annotation.coordinate)
+        let launchOptions = [ MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+        MKMapItem.openMaps(with: [MKMapItem.forCurrentLocation(), MKMapItem(placemark: placemark)], launchOptions: launchOptions)
     }
 }

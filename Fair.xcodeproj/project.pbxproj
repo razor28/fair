@@ -118,6 +118,12 @@
 		D895EB831FDAE7F900A8BF94 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB821FDAE7F900A8BF94 /* Article.swift */; };
 		D895EB841FDAE7F900A8BF94 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB821FDAE7F900A8BF94 /* Article.swift */; };
 		D895EB851FDAE7F900A8BF94 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB821FDAE7F900A8BF94 /* Article.swift */; };
+		D895EB8B1FDB00CA00A8BF94 /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB8A1FDB00CA00A8BF94 /* Dealer.swift */; };
+		D895EB8C1FDB00CA00A8BF94 /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB8A1FDB00CA00A8BF94 /* Dealer.swift */; };
+		D895EB8D1FDB00CA00A8BF94 /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB8A1FDB00CA00A8BF94 /* Dealer.swift */; };
+		D895EB8F1FDB015400A8BF94 /* DealersAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB8E1FDB015400A8BF94 /* DealersAPIResponse.swift */; };
+		D895EB901FDB015400A8BF94 /* DealersAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB8E1FDB015400A8BF94 /* DealersAPIResponse.swift */; };
+		D895EB911FDB015400A8BF94 /* DealersAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB8E1FDB015400A8BF94 /* DealersAPIResponse.swift */; };
 		D8C2E87B1FD7D69E009CD3AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C2E87A1FD7D69E009CD3AD /* AppDelegate.swift */; };
 		D8C2E8801FD7D69E009CD3AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E87E1FD7D69E009CD3AD /* Main.storyboard */; };
 		D8C2E8821FD7D69E009CD3AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E8811FD7D69E009CD3AD /* Assets.xcassets */; };
@@ -187,6 +193,8 @@
 		D895EB7A1FDADB5700A8BF94 /* OverviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCell.swift; sourceTree = "<group>"; };
 		D895EB7E1FDAE06200A8BF94 /* OverviewAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewAPIResponse.swift; sourceTree = "<group>"; };
 		D895EB821FDAE7F900A8BF94 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		D895EB8A1FDB00CA00A8BF94 /* Dealer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer.swift; sourceTree = "<group>"; };
+		D895EB8E1FDB015400A8BF94 /* DealersAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealersAPIResponse.swift; sourceTree = "<group>"; };
 		D8C2E8771FD7D69E009CD3AD /* Fair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C2E87A1FD7D69E009CD3AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8C2E87F1FD7D69E009CD3AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -338,6 +346,8 @@
 				D850557E1FD944F900AD2060 /* APIManager.swift */,
 				D895EB7E1FDAE06200A8BF94 /* OverviewAPIResponse.swift */,
 				D895EB821FDAE7F900A8BF94 /* Article.swift */,
+				D895EB8A1FDB00CA00A8BF94 /* Dealer.swift */,
+				D895EB8E1FDB015400A8BF94 /* DealersAPIResponse.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -665,6 +675,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D850557C1FD943FF00AD2060 /* MakesAPIResponse.swift in Sources */,
+				D895EB901FDB015400A8BF94 /* DealersAPIResponse.swift in Sources */,
 				D895EB5F1FDABDDA00A8BF94 /* YearCoordinator.swift in Sources */,
 				D81D91411FD8EC64009F7C62 /* Iteratable.swift in Sources */,
 				D81D917D1FD9105A009F7C62 /* MakeCell.swift in Sources */,
@@ -672,6 +683,7 @@
 				D895EB521FDAAFC400A8BF94 /* ModelCoordinator.swift in Sources */,
 				D85055721FD936AC00AD2060 /* KeysDev.swift in Sources */,
 				D81D91681FD90568009F7C62 /* Make.swift in Sources */,
+				D895EB8C1FDB00CA00A8BF94 /* Dealer.swift in Sources */,
 				D81D91161FD8E12E009F7C62 /* AppDelegate.swift in Sources */,
 				D85055781FD93CC300AD2060 /* APIService.swift in Sources */,
 				D81D91701FD9063E009F7C62 /* Year.swift in Sources */,
@@ -701,6 +713,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D850557D1FD943FF00AD2060 /* MakesAPIResponse.swift in Sources */,
+				D895EB911FDB015400A8BF94 /* DealersAPIResponse.swift in Sources */,
 				D895EB601FDABDDA00A8BF94 /* YearCoordinator.swift in Sources */,
 				D81D91421FD8EC64009F7C62 /* Iteratable.swift in Sources */,
 				D81D917E1FD9105A009F7C62 /* MakeCell.swift in Sources */,
@@ -708,6 +721,7 @@
 				D895EB531FDAAFC400A8BF94 /* ModelCoordinator.swift in Sources */,
 				D81D91691FD90568009F7C62 /* Make.swift in Sources */,
 				D81D91281FD8E21B009F7C62 /* AppDelegate.swift in Sources */,
+				D895EB8D1FDB00CA00A8BF94 /* Dealer.swift in Sources */,
 				D81D91711FD9063E009F7C62 /* Year.swift in Sources */,
 				D85055791FD93CC300AD2060 /* APIService.swift in Sources */,
 				D81D913E1FD8EAA3009F7C62 /* State.swift in Sources */,
@@ -748,6 +762,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D850557B1FD943FF00AD2060 /* MakesAPIResponse.swift in Sources */,
+				D895EB8F1FDB015400A8BF94 /* DealersAPIResponse.swift in Sources */,
 				D895EB5E1FDABDDA00A8BF94 /* YearCoordinator.swift in Sources */,
 				D81D91401FD8EC64009F7C62 /* Iteratable.swift in Sources */,
 				D81D917C1FD9105A009F7C62 /* MakeCell.swift in Sources */,
@@ -755,6 +770,7 @@
 				D895EB511FDAAFC400A8BF94 /* ModelCoordinator.swift in Sources */,
 				D81D91671FD90568009F7C62 /* Make.swift in Sources */,
 				D85055701FD9364700AD2060 /* Keys.swift in Sources */,
+				D895EB8B1FDB00CA00A8BF94 /* Dealer.swift in Sources */,
 				D8C2E87B1FD7D69E009CD3AD /* AppDelegate.swift in Sources */,
 				D85055771FD93CC300AD2060 /* APIService.swift in Sources */,
 				D81D916F1FD9063E009F7C62 /* Year.swift in Sources */,
