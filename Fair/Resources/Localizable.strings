@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Fair
+
+  Created by Dastan Tashimbetov on 12/6/17.
+  Copyright © 2017 Dastan. All rights reserved.
+*/
+
+"Tab-Bar-Item-Title-All" = "All";
+"Tab-Bar-Item-Title-New" = "New";
+"Tab-Bar-Item-Title-Used" = "Used";
+"Tab-Bar-Item-Title-Future" = "Future";
