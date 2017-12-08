@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 enum APIService {
-    case makes(state: State)
+    case makes(state: State, sampleData: Data?)
 }
 
 extension APIService: TargetType {
@@ -29,14 +29,19 @@ extension APIService: TargetType {
         var parameters = ["fmt": "json",
                           "api_key": Key.apiKey()]
         switch self {
-        case .makes(let state):
+        case .makes(let state, _):
             guard state != .all else { return .requestParameters(parameters: parameters, encoding: URLEncoding.default) }
             parameters["state"] = state.rawValue
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         }
     }
 
-    var sampleData: Data { return Data() }
+    var sampleData: Data {
+        switch self {
+        case .makes(_, let sampleData):
+            return sampleData ?? Data()
+        }
+    }
 
     var headers: [String: String]? { return nil }
 
