@@ -10,7 +10,6 @@ import UIKit
 import Kingfisher
 
 final class MakeViewController: UIViewController, Reloadable {
-    @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tableView: UITableView!
 
     weak var carDataSource: CarDataSource?
