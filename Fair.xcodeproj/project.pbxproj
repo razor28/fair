@@ -91,6 +91,9 @@
 		D895EB591FDAB53400A8BF94 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB581FDAB53400A8BF94 /* ItemViewController.swift */; };
 		D895EB5A1FDAB53400A8BF94 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB581FDAB53400A8BF94 /* ItemViewController.swift */; };
 		D895EB5B1FDAB53400A8BF94 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB581FDAB53400A8BF94 /* ItemViewController.swift */; };
+		D895EB5E1FDABDDA00A8BF94 /* YearCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB5D1FDABDDA00A8BF94 /* YearCoordinator.swift */; };
+		D895EB5F1FDABDDA00A8BF94 /* YearCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB5D1FDABDDA00A8BF94 /* YearCoordinator.swift */; };
+		D895EB601FDABDDA00A8BF94 /* YearCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB5D1FDABDDA00A8BF94 /* YearCoordinator.swift */; };
 		D8C2E87B1FD7D69E009CD3AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C2E87A1FD7D69E009CD3AD /* AppDelegate.swift */; };
 		D8C2E8801FD7D69E009CD3AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E87E1FD7D69E009CD3AD /* Main.storyboard */; };
 		D8C2E8821FD7D69E009CD3AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E8811FD7D69E009CD3AD /* Assets.xcassets */; };
@@ -151,6 +154,7 @@
 		D895EB501FDAAFC400A8BF94 /* ModelCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCoordinator.swift; sourceTree = "<group>"; };
 		D895EB541FDAB15000A8BF94 /* Selectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selectable.swift; sourceTree = "<group>"; };
 		D895EB581FDAB53400A8BF94 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		D895EB5D1FDABDDA00A8BF94 /* YearCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearCoordinator.swift; sourceTree = "<group>"; };
 		D8C2E8771FD7D69E009CD3AD /* Fair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C2E87A1FD7D69E009CD3AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8C2E87F1FD7D69E009CD3AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -322,6 +326,14 @@
 			path = CarModel;
 			sourceTree = "<group>";
 		};
+		D895EB5C1FDABDC400A8BF94 /* CarYear */ = {
+			isa = PBXGroup;
+			children = (
+				D895EB5D1FDABDDA00A8BF94 /* YearCoordinator.swift */,
+			);
+			path = CarYear;
+			sourceTree = "<group>";
+		};
 		D8C2E86E1FD7D69E009CD3AD = {
 			isa = PBXGroup;
 			children = (
@@ -346,6 +358,7 @@
 		D8C2E8791FD7D69E009CD3AD /* Fair */ = {
 			isa = PBXGroup;
 			children = (
+				D895EB5C1FDABDC400A8BF94 /* CarYear */,
 				D895EB4F1FDAAF9000A8BF94 /* CarModel */,
 				D85055751FD93C8E00AD2060 /* Networking */,
 				D81D91781FD9102C009F7C62 /* CarMake */,
@@ -601,6 +614,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D850557C1FD943FF00AD2060 /* MakesAPIResponse.swift in Sources */,
+				D895EB5F1FDABDDA00A8BF94 /* YearCoordinator.swift in Sources */,
 				D81D91411FD8EC64009F7C62 /* Iteratable.swift in Sources */,
 				D81D917D1FD9105A009F7C62 /* MakeCell.swift in Sources */,
 				D81D91371FD8E628009F7C62 /* AppCoordinator.swift in Sources */,
@@ -629,6 +643,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D850557D1FD943FF00AD2060 /* MakesAPIResponse.swift in Sources */,
+				D895EB601FDABDDA00A8BF94 /* YearCoordinator.swift in Sources */,
 				D81D91421FD8EC64009F7C62 /* Iteratable.swift in Sources */,
 				D81D917E1FD9105A009F7C62 /* MakeCell.swift in Sources */,
 				D81D91381FD8E628009F7C62 /* AppCoordinator.swift in Sources */,
@@ -668,6 +683,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D850557B1FD943FF00AD2060 /* MakesAPIResponse.swift in Sources */,
+				D895EB5E1FDABDDA00A8BF94 /* YearCoordinator.swift in Sources */,
 				D81D91401FD8EC64009F7C62 /* Iteratable.swift in Sources */,
 				D81D917C1FD9105A009F7C62 /* MakeCell.swift in Sources */,
 				D81D91361FD8E628009F7C62 /* AppCoordinator.swift in Sources */,
