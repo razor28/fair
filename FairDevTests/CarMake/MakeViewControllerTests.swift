@@ -27,8 +27,4 @@ class MakeViewControllerTests: XCTestCase {
     func testHasTableView() {
         XCTAssertNotNil(makeViewController.tableView)
     }
-
-    func testHasSearchBar() {
-        XCTAssertNotNil(makeViewController.searchBar)
-    }
 }
