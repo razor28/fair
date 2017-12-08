@@ -68,7 +68,6 @@
                                                     </connections>
                                                 </collectionView>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="olY-ez-SBa" secondAttribute="bottom" id="7eU-SX-UbQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="olY-ez-SBa" secondAttribute="trailing" id="DkV-NP-Cmy"/>
@@ -76,9 +75,33 @@
                                                 <constraint firstItem="olY-ez-SBa" firstAttribute="leading" secondItem="uoE-JI-iip" secondAttribute="leading" id="mqr-zh-jZX"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="collectionView" destination="olY-ez-SBa" id="Uy0-WG-pIi"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OverviewCell" id="eWv-Qm-cIa" customClass="OverviewCell" customModule="Fair" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eWv-Qm-cIa" id="j2F-H8-zig">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="r0a-d2-7fn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="r0a-d2-7fn" secondAttribute="bottom" id="QDM-VX-5By"/>
+                                                <constraint firstItem="r0a-d2-7fn" firstAttribute="top" secondItem="j2F-H8-zig" secondAttribute="top" id="Uyl-cW-gdo"/>
+                                                <constraint firstItem="r0a-d2-7fn" firstAttribute="leading" secondItem="j2F-H8-zig" secondAttribute="leading" id="hFj-8j-LWr"/>
+                                                <constraint firstAttribute="trailing" secondItem="r0a-d2-7fn" secondAttribute="trailing" id="sBH-Be-MAM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textView" destination="r0a-d2-7fn" id="CHh-8k-9gR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
