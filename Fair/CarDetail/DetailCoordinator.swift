@@ -21,6 +21,7 @@ final class DetailCoordinator {
     weak var delegate: DetailCoordinatorDelegate?
 
     private var overViewText: String?
+    private var articles: [Article]?
 
     init(rootViewController: UIViewController, make: Make, model: Model, year: Year) {
         self.rootViewController = rootViewController
@@ -34,6 +35,7 @@ final class DetailCoordinator {
         detailVC.delegate = self
         rootViewController.show(detailVC, sender: nil)
         requestOverviewAndUpdate(detailVC)
+        requestArticlesAndUpdate(detailVC)
     }
 
     private func requestOverviewAndUpdate(_ detailVC: DetailViewController) {
@@ -45,7 +47,7 @@ final class DetailCoordinator {
             strongSelf.overViewText = overview
             strongVC.reloadOverview()
         }
-        let failure: (String) -> Void = { [weak detailVC, weak self] in
+        let failure: (String) -> Void = { [weak detailVC, weak self] message in
             guard
                 let strongSelf = self,
                 let strongVC = detailVC
@@ -54,6 +56,21 @@ final class DetailCoordinator {
             strongVC.reloadOverview()
         }
         APIManager.sharedInstance.overview(with: make.name, model: model.name, year: "\(year.year)", success: success, failure: failure)
+    }
+
+    private func requestArticlesAndUpdate(_ detailVC: DetailViewController) {
+        let success: ([Article]) -> Void  = { [weak detailVC, weak self] articles in
+            guard
+                let strongSelf = self,
+                let strongVC = detailVC
+                else { return }
+            strongSelf.articles = articles
+            strongVC.reloadArticles()
+        }
+        let failure: (String) -> Void = { message in
+           debugPrint(message)
+        }
+        APIManager.sharedInstance.articles(with: make.name, model: model.name, year: "\(year.year)", success: success, failure: failure)
     }
 }
 
@@ -74,5 +91,10 @@ extension DetailCoordinator: DetailViewControllerDelegate {
     func overViewText(for: DetailViewController) -> String {
         guard let overViewText = overViewText else { return "" }
         return overViewText
+    }
+
+    func articles(for: DetailViewController) -> [Article] {
+        guard let articles = articles else { return [] }
+        return articles
     }
 }

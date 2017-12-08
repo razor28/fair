@@ -12,11 +12,14 @@ protocol DetailViewControllerDelegate: class {
     func userDidReturn(from: DetailViewController)
     func imageLinks(for: DetailViewController) -> [URL]
     func overViewText(for: DetailViewController) -> String
+    func articles(for: DetailViewController) -> [Article]
 }
 
 final class DetailViewController: UIViewController {
     weak var delegate: DetailViewControllerDelegate?
     @IBOutlet var tableView: UITableView!
+
+    private var articles = [Article]()
 
     static func instantiateFromStoryboard() -> DetailViewController? {
         let storyboard = UIStoryboard(name: "Detail", bundle: nil)
@@ -38,8 +41,14 @@ final class DetailViewController: UIViewController {
     }
 
     func reloadOverview() {
-        let sectionToReload = 1
-        let indexSet: IndexSet = [sectionToReload]
+        let indexSet: IndexSet = [1]
+        tableView.reloadSections(indexSet, with: .automatic)
+    }
+
+    func reloadArticles() {
+        guard let updatedArticles = delegate?.articles(for: self) else { return }
+        articles = updatedArticles
+        let indexSet: IndexSet = [2]
         tableView.reloadSections(indexSet, with: .automatic)
     }
 }
@@ -67,7 +76,7 @@ extension DetailViewController: UITableViewDataSource {
         case 0, 1:
             return 1
         default:
-            return 0
+            return articles.count
         }
     }
 
@@ -83,6 +92,11 @@ extension DetailViewController: UITableViewDataSource {
             guard let overViewText = delegate?.overViewText(for: self) else { return cell }
             cell.textView.text = overViewText
             return cell
+        case 2:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") else { return UITableViewCell() }
+            let article = articles[indexPath.row]
+            cell.textLabel?.text = article.title
+            return cell
         default:
             return UITableViewCell()
         }
@@ -95,9 +109,16 @@ extension DetailViewController: UITableViewDelegate {
         case 0:
             return 100
         case 1:
-            return 200
+            return 150
         default:
             return 44
         }
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard indexPath.section == 2 else { return }
+        let link = articles[indexPath.row].link
+        UIApplication.shared.open(link, options: [:], completionHandler: nil)
     }
 }
