@@ -7,32 +7,54 @@
 //
 
 import UIKit
+import Kingfisher
 
-final class AppCoordinator {
+final class AppCoordinator: NSObject {
     private let tabBarController: UITabBarController
+    private var childCoordinators = [MakeCoordinator]()
 
     init(tabBarController: UITabBarController) {
         self.tabBarController = tabBarController
     }
 
     func start() {
+        // 50 MB
+        ImageCache.default.maxDiskCacheSize = 50 * 1024 * 1024
+
+        tabBarController.delegate = self
         var tabViewControllers = [UINavigationController]()
         for rawValue in State.rawValues() {
-            guard let state = State(rawValue: rawValue) else { continue }
-            let vc = viewController(with: state)
-            let navigationController = UINavigationController(rootViewController: vc)
-            tabViewControllers.append(navigationController)
+            guard
+                let state = State(rawValue: rawValue),
+                let makeViewController = MakeViewController.instantiateFromStoryboard()
+            else { continue }
+            setup(makeViewController, with: state)
+            tabViewControllers.append(UINavigationController(rootViewController: makeViewController))
+            let makeCoordinator = MakeCoordinator(reloadableObject: makeViewController, state: state)
+            childCoordinators.append(makeCoordinator)
         }
         tabBarController.viewControllers = tabViewControllers
+        childCoordinators.first?.start()
     }
 
-    private func viewController(with state: State) -> UIViewController {
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = UIColor.white
+    private func setup(_ viewController: UIViewController, with state: State) {
         let title = state.tabBarItemTitle
+        viewController.title = title
         let image = state.tabBarItemImage
         let seledtedImage = state.tabBarItemSelectedImage
         viewController.tabBarItem = UITabBarItem(title: title, image: image, selectedImage: seledtedImage)
-        return viewController
+    }
+}
+
+extension AppCoordinator: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        guard
+            let navigationController = viewController as? UINavigationController,
+            let rootViewController = navigationController.viewControllers.first
+        else { return }
+        let affectedCoordinators = childCoordinators.filter { $0.reloadableObject === rootViewController }
+        affectedCoordinators.forEach { coordinator in
+            coordinator.start()
+        }
     }
 }

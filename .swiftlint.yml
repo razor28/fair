@@ -1,1 +1,6 @@
 line_length: 150
+excluded:
+- Carthage
+identifier_name:
+    excluded:
+        - id

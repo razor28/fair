@@ -57,3 +57,11 @@ xcuserdata/
 
 # Assets
 /Fair/Assets.xcassets
+
+# Carthage dependency manager
+/Carthage
+
+# Keep your keys in secret
+Fair/Configuration/Keys.swift
+Fair/Configuration/KeysDev.swift
+Fair/Configuration/KeysBeta.swift
