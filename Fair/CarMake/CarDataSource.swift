@@ -10,8 +10,7 @@ import Foundation
 
 protocol CarDataSource: class {
     func makes() -> [Make]
-    func models(for: Make) -> [Model]
-    func years(for: Model) -> [Year]
+    func refreshDataSource()
 }
 
 extension CarDataSource {
@@ -19,11 +18,5 @@ extension CarDataSource {
         return [Make]()
     }
 
-    func models(for: Make) -> [Model] {
-        return [Model]()
-    }
-
-    func years(for: Model) -> [Year] {
-        return [Year]()
-    }
+    func refreshDataSource() { }
 }

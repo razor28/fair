@@ -23,13 +23,20 @@ final class MakeCoordinator {
     func start() {
         reloadableObject.carDataSource = self
         reloadableObject.selectableDelegate = self
+        downloadData()
+    }
+
+    private func downloadData() {
         let success: ([Make]) -> Void  = { [weak self] makes in
             guard let strongSelf = self else { return }
             strongSelf.items = makes
-            strongSelf.reloadableObject.reloadData()
+            strongSelf.reloadableObject.dataState = .ready
         }
-        let failure: (String) -> Void = { message in
+        let failure: (String) -> Void = {[weak self] message in
             debugPrint("Error message: \(message)")
+            guard let strongSelf = self else { return }
+            strongSelf.items = [Make]()
+            strongSelf.reloadableObject.dataState = .error
         }
         APIManager.sharedInstance.makes(with: state, success: success, failure: failure)
     }
@@ -38,6 +45,10 @@ final class MakeCoordinator {
 extension MakeCoordinator: CarDataSource {
     func makes() -> [Make] {
         return items
+    }
+
+    func refreshDataSource() {
+        downloadData()
     }
 }
 

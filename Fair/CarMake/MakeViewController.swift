@@ -8,12 +8,14 @@
 
 import UIKit
 import Kingfisher
+import StatefulViewController
 
-final class MakeViewController: UIViewController, Reloadable {
+final class MakeViewController: UIViewController, Reloadable, StatefulViewController {
     @IBOutlet var tableView: UITableView!
 
     weak var carDataSource: CarDataSource?
     weak var selectableDelegate: Selectable?
+    var dataState: DataState = .loading { didSet { reloadData() } }
 
     private let cellIdentifier = String(describing: MakeCell.self)
     private var items = [Make]()
@@ -25,21 +27,50 @@ final class MakeViewController: UIViewController, Reloadable {
         return controller
     }
 
-    func reloadData() {
-        guard let items = carDataSource?.makes() else { return }
-        self.items = items
-        tableView.reloadData()
+    private func reloadData() {
+        defer { tableView.reloadData() }
+        switch dataState {
+        case .loading:
+            return
+        case .error:
+            endLoading(error: NSError(domain: "foo", code: -1, userInfo: nil))
+            return
+        default:
+            guard let items = carDataSource?.makes() else { return }
+            self.items = items
+            endLoading(error: nil)
+        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupPlaceholderViews()
+        setupInitialViewState()
+        startLoading()
     }
 
     private func setupTableView() {
         let cellNib = UINib(nibName: cellIdentifier, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: cellIdentifier)
         tableView.tableFooterView = UIView()
+    }
+
+    private func setupPlaceholderViews() {
+        loadingView = LoadingView(frame: view.frame)
+        emptyView = EmptyView(frame: view.frame)
+        let failureView = ErrorView(frame: view.frame)
+        failureView.tapGestureRecognizer.addTarget(self, action: #selector(refresh))
+        errorView = failureView
+    }
+
+    @objc private func refresh() {
+        dataState = .loading
+        carDataSource?.refreshDataSource()
+    }
+
+    func hasContent() -> Bool {
+        return !items.isEmpty
     }
 }
 
