@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Make" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIF-v2-Z4U">
-                        <rect key="frame" x="10" y="0.0" width="277.5" height="63"/>
+                        <rect key="frame" x="15" y="0.0" width="272.5" height="63"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -33,7 +33,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="eIF-v2-Z4U" secondAttribute="bottom" id="BMQ-aZ-Yg3"/>
-                    <constraint firstItem="eIF-v2-Z4U" firstAttribute="leading" secondItem="2rI-hh-Irl" secondAttribute="leading" constant="10" id="HSq-jR-lVa"/>
+                    <constraint firstItem="eIF-v2-Z4U" firstAttribute="leading" secondItem="2rI-hh-Irl" secondAttribute="leading" constant="15" id="HSq-jR-lVa"/>
                     <constraint firstAttribute="bottom" secondItem="b5v-cu-62g" secondAttribute="bottom" constant="10" id="Kud-Eh-yM9"/>
                     <constraint firstItem="b5v-cu-62g" firstAttribute="top" secondItem="2rI-hh-Irl" secondAttribute="top" constant="10" id="QcB-o5-vIU"/>
                     <constraint firstItem="eIF-v2-Z4U" firstAttribute="top" secondItem="2rI-hh-Irl" secondAttribute="top" id="RwZ-Yb-gzz"/>
