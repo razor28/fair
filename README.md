@@ -7,4 +7,8 @@
 * Please pay attention for multiple schemes and targets. Unit test is available only for FairDev target
 ## Notes
 * The main application architecture pattern is based on [Coordinators](http://khanlou.com/2015/10/coordinators-redux/)
-
+## Screenshots
+![Makes](https://user-images.githubusercontent.com/537530/33807610-5edf75e2-dd8e-11e7-8136-9cd3e11e8752.png)
+![Details](https://user-images.githubusercontent.com/537530/33807609-5ec6f95e-dd8e-11e7-831c-29d4912eb510.png)
+![Model](https://user-images.githubusercontent.com/537530/33807611-5ef88834-dd8e-11e7-8853-95c32c609124.png)
+![Year](https://user-images.githubusercontent.com/537530/33807612-5f0e88d2-dd8e-11e7-8a48-e4b193feea89.png)
