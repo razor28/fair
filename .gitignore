@@ -57,6 +57,9 @@ xcuserdata/
 
 # Assets
 /Fair/Assets.xcassets
+/Fair/AssetsDev.xcassets
+/Fair/AssetsBeta.xcassets
+/Fair/AssetsShared.xcassets
 
 # Carthage dependency manager
 /Carthage

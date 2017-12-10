@@ -9,11 +9,9 @@
 /* Begin PBXBuildFile section */
 		D81D91161FD8E12E009F7C62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C2E87A1FD7D69E009CD3AD /* AppDelegate.swift */; };
 		D81D91191FD8E12E009F7C62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E8831FD7D69E009CD3AD /* LaunchScreen.storyboard */; };
-		D81D911A1FD8E12E009F7C62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E8811FD7D69E009CD3AD /* Assets.xcassets */; };
 		D81D911B1FD8E12E009F7C62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E87E1FD7D69E009CD3AD /* Main.storyboard */; };
 		D81D91281FD8E21B009F7C62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C2E87A1FD7D69E009CD3AD /* AppDelegate.swift */; };
 		D81D912B1FD8E21B009F7C62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E8831FD7D69E009CD3AD /* LaunchScreen.storyboard */; };
-		D81D912C1FD8E21B009F7C62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E8811FD7D69E009CD3AD /* Assets.xcassets */; };
 		D81D912D1FD8E21B009F7C62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C2E87E1FD7D69E009CD3AD /* Main.storyboard */; };
 		D81D91361FD8E628009F7C62 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81D91351FD8E628009F7C62 /* AppCoordinator.swift */; };
 		D81D91371FD8E628009F7C62 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81D91351FD8E628009F7C62 /* AppCoordinator.swift */; };
@@ -93,6 +91,11 @@
 		D873CB461FDDBE430018CEC5 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D873CB3C1FDDBE430018CEC5 /* LoadingView.swift */; };
 		D873CB471FDDBE430018CEC5 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D873CB3C1FDDBE430018CEC5 /* LoadingView.swift */; };
 		D873CB481FDDBE430018CEC5 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D873CB3C1FDDBE430018CEC5 /* LoadingView.swift */; };
+		D873CB4E1FDDE4760018CEC5 /* AssetsDev.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D873CB4D1FDDE4760018CEC5 /* AssetsDev.xcassets */; };
+		D873CB541FDDE5210018CEC5 /* AssetsShared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D873CB531FDDE5210018CEC5 /* AssetsShared.xcassets */; };
+		D873CB551FDDE5210018CEC5 /* AssetsShared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D873CB531FDDE5210018CEC5 /* AssetsShared.xcassets */; };
+		D873CB561FDDE5210018CEC5 /* AssetsShared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D873CB531FDDE5210018CEC5 /* AssetsShared.xcassets */; };
+		D873CB581FDDE5B10018CEC5 /* AssetsBeta.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D873CB571FDDE5B10018CEC5 /* AssetsBeta.xcassets */; };
 		D895EB4B1FDAA11500A8BF94 /* AllMakes.json in Resources */ = {isa = PBXBuildFile; fileRef = D895EB4A1FDAA11500A8BF94 /* AllMakes.json */; };
 		D895EB4E1FDAABA700A8BF94 /* Incorrect.json in Resources */ = {isa = PBXBuildFile; fileRef = D895EB4D1FDAABA700A8BF94 /* Incorrect.json */; };
 		D895EB511FDAAFC400A8BF94 /* ModelCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895EB501FDAAFC400A8BF94 /* ModelCoordinator.swift */; };
@@ -205,6 +208,9 @@
 		D873CB3A1FDDBE430018CEC5 /* BasicPlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicPlaceholderView.swift; sourceTree = "<group>"; };
 		D873CB3B1FDDBE430018CEC5 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		D873CB3C1FDDBE430018CEC5 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		D873CB4D1FDDE4760018CEC5 /* AssetsDev.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = AssetsDev.xcassets; path = ../../../../Desktop/AssetsDev.xcassets; sourceTree = "<group>"; };
+		D873CB531FDDE5210018CEC5 /* AssetsShared.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AssetsShared.xcassets; sourceTree = "<group>"; };
+		D873CB571FDDE5B10018CEC5 /* AssetsBeta.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AssetsBeta.xcassets; sourceTree = "<group>"; };
 		D895EB4A1FDAA11500A8BF94 /* AllMakes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllMakes.json; sourceTree = "<group>"; };
 		D895EB4D1FDAABA700A8BF94 /* Incorrect.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Incorrect.json; sourceTree = "<group>"; };
 		D895EB501FDAAFC400A8BF94 /* ModelCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCoordinator.swift; sourceTree = "<group>"; };
@@ -475,6 +481,9 @@
 				D8C2E87A1FD7D69E009CD3AD /* AppDelegate.swift */,
 				D8C2E87E1FD7D69E009CD3AD /* Main.storyboard */,
 				D8C2E8811FD7D69E009CD3AD /* Assets.xcassets */,
+				D873CB4D1FDDE4760018CEC5 /* AssetsDev.xcassets */,
+				D873CB571FDDE5B10018CEC5 /* AssetsBeta.xcassets */,
+				D873CB531FDDE5210018CEC5 /* AssetsShared.xcassets */,
 				D8C2E8831FD7D69E009CD3AD /* LaunchScreen.storyboard */,
 			);
 			path = Fair;
@@ -611,9 +620,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D873CB4E1FDDE4760018CEC5 /* AssetsDev.xcassets in Resources */,
+				D873CB551FDDE5210018CEC5 /* AssetsShared.xcassets in Resources */,
 				D81D91191FD8E12E009F7C62 /* LaunchScreen.storyboard in Resources */,
 				D81D91461FD8ED5A009F7C62 /* Localizable.strings in Resources */,
-				D81D911A1FD8E12E009F7C62 /* Assets.xcassets in Resources */,
 				D81D91891FD917F3009F7C62 /* Make.storyboard in Resources */,
 				D895EB6C1FDAC2B000A8BF94 /* Detail.storyboard in Resources */,
 				D81D91811FD91387009F7C62 /* MakeCell.xib in Resources */,
@@ -627,10 +637,11 @@
 			files = (
 				D81D912B1FD8E21B009F7C62 /* LaunchScreen.storyboard in Resources */,
 				D81D91471FD8ED5A009F7C62 /* Localizable.strings in Resources */,
-				D81D912C1FD8E21B009F7C62 /* Assets.xcassets in Resources */,
+				D873CB561FDDE5210018CEC5 /* AssetsShared.xcassets in Resources */,
 				D81D918A1FD917F3009F7C62 /* Make.storyboard in Resources */,
 				D895EB6D1FDAC2B000A8BF94 /* Detail.storyboard in Resources */,
 				D81D91821FD91387009F7C62 /* MakeCell.xib in Resources */,
+				D873CB581FDDE5B10018CEC5 /* AssetsBeta.xcassets in Resources */,
 				D81D912D1FD8E21B009F7C62 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -651,6 +662,7 @@
 				D8C2E8851FD7D69E009CD3AD /* LaunchScreen.storyboard in Resources */,
 				D81D91451FD8ED5A009F7C62 /* Localizable.strings in Resources */,
 				D8C2E8821FD7D69E009CD3AD /* Assets.xcassets in Resources */,
+				D873CB541FDDE5210018CEC5 /* AssetsShared.xcassets in Resources */,
 				D81D91881FD917F3009F7C62 /* Make.storyboard in Resources */,
 				D895EB6B1FDAC2B000A8BF94 /* Detail.storyboard in Resources */,
 				D81D91801FD91387009F7C62 /* MakeCell.xib in Resources */,
