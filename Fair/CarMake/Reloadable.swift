@@ -8,8 +8,14 @@
 
 import Foundation
 
+enum DataState {
+    case loading
+    case ready
+    case error
+}
+
 protocol Reloadable: class {
-    func reloadData()
     weak var carDataSource: CarDataSource? { get set }
     weak var selectableDelegate: Selectable? { get set }
+    var dataState: DataState { get set }
 }
