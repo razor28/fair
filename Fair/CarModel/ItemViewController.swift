@@ -39,11 +39,17 @@ extension ItemViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") else { return UITableViewCell() }
         cell.textLabel?.text = items[indexPath.row]
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
 }
 
 extension ItemViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 64.0
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         delegate?.itemViewController(self, didSelectItemAt: indexPath.row)
